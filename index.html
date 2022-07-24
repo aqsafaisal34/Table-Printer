@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(images/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center; 
+            color: white;
+            margin-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table Printer</h1>
+
+
+    <form onsubmit="conditioncheck(); return false;">
+     <label for="numberinput">Enter a Number:</label> <br> <br>
+     <input type="number" required min="1" placeholder="Enter any Number" id="numberinput"> 
+     <input type="submit" value="check">
+    </form>
+
+    <div id="result"></div>
+
+
+
+
+
+
+
+    <script>
+    function conditioncheck(){
+        let input = +document.querySelector("#numberinput").value;
+        document.querySelector("#result").innerHTML = "" ;
+
+        for (let i = 0; i < 10; i++){
+            document.querySelector("#result").innerHTML += `<h3> ${input} × ${i+1} = ${input * (i+1)} </h3>`;
+        }
+
+    }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
